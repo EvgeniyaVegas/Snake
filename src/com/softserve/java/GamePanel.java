@@ -17,10 +17,9 @@ public class GamePanel extends JPanel implements ActionListener {
 	private final int[] oX = new int[TOTAL_UNITS];
 	private final int[] oY = new int[TOTAL_UNITS];
 	private int bodyParts = 6;
-	private int applesEaten; //??
 	private int appleX;
 	private int appleY;
-	char direction = 'R'; //R-ight, L-eft, U-p, D-own
+	char direction = 'R'; //Right, Left, Up, Down
 	boolean running = false;
 	Timer timer;
 	Random random;
@@ -95,7 +94,6 @@ public class GamePanel extends JPanel implements ActionListener {
 	public void checkApple() {
 		if (oX[0] == appleX && oY[0] == appleY) {
 			bodyParts++;
-			applesEaten++;//???
 			newApple();
 		}
 	}
